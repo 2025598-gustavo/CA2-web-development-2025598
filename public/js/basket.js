@@ -10,8 +10,15 @@ function loadBasket() {
             let total = 0;
 
             if (basket.length === 0) {
-                basketItems.innerHTML = "<p>Your basket is empty.</p>";
+
+                basketItems.innerHTML = `
+                <p style="margin-left: 0px;">
+                    Your basket is empty.
+                </p>
+                `;
+
                 totalElement.innerHTML = "";
+                document.getElementById("checkout-btn").style.display = "none";
                 return;
             }
 
@@ -31,6 +38,7 @@ function loadBasket() {
                 basketItems.appendChild(card);
             });
 
+            document.getElementById("checkout-btn").style.display = "inline-block";
             totalElement.innerHTML = `Total: €${total.toFixed(2)}`;
         });
 }
@@ -39,21 +47,21 @@ function removeItem(index) {
     fetch(`/api/basket/${index}`, {
         method: "DELETE"
     })
-    .then(response => response.json())
-    .then(data => {
-        loadBasket();
-    });
+        .then(response => response.json())
+        .then(data => {
+            loadBasket();
+        });
 }
 
 function checkout() {
     fetch("/api/checkout", {
         method: "POST"
     })
-    .then(response => response.json())
-    .then(data => {
-        alert("Checkout completed successfully");
-        loadBasket();
-    });
+        .then(response => response.json())
+        .then(data => {
+            alert("Checkout completed successfully");
+            loadBasket();
+        });
 }
 
 loadBasket();
