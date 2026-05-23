@@ -1,0 +1,192 @@
+/* Apply global font and reset margin */
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    background: #f4f4f4; /* Light gray background */
+}
+
+/* Header background image styling */
+.header-content {
+    background-image: url("../img/header.png");
+    background-size: contain; /* Scale image without stretching */
+    background-repeat: no-repeat; /* Prevent repetition */
+    background-position: center; /* Center the image */
+    height: 300px; /* Fixed header height */
+    background-color: #f9faf9; /* Fallback background color */
+}
+
+/* Navigation bar styling */
+nav {
+    background: #0a3662; /* Dark blue background */
+    padding: 20px;
+    text-align: center;
+    position: sticky; /* Sticks nav to top when scrolling */
+}
+
+/* Navigation links styling */
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: #3da4e8; /* Hover effect for links */
+}
+
+/* Container widths and spacing */
+.container, .container-index, .container-about  {
+    width: 70%; /* Main content width */
+    margin: auto; /* Center content */
+    padding: 20px;
+    min-height: 500px; /* Minimum content height */
+}
+
+/* Paragraph styling within containers */
+.container p {
+    max-width: 600px; /* Limit line width for readability */
+    margin: 1rem auto;
+    font-size: 18px;
+}
+
+/* Headings styling within containers */
+.container h1 {
+    max-width: 600px;
+    margin: 1rem auto;
+    font-size: 28px;
+}
+
+/* Hero title section with background image */
+.title {
+    background: url("../img/dog.png") center/cover no-repeat; /* Centered cover image */
+    height: 300px;
+    display: flex; /* Flexbox to center text */
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Flex container for cards */
+.card-container {
+    display: flex;
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Allow cards to wrap on small screens */
+}
+
+/* Individual card styling */
+.card {
+    background: white;
+    padding: 20px;
+    flex: 1;
+    min-width: 200px; /* Minimum width for responsiveness */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Footer styling */
+footer {
+    background: #0a3662; /* Match nav bar */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Form styling */
+form {
+    background: white;
+    padding: 20px;
+    max-width: 500px; /* Limit form width */
+}
+
+/* Form groups spacing */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Labels styling */
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Input and textarea styling */
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* General input and textarea spacing */
+input,
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    background: #27ae60; /* Green button */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #219150; /* Darker green on hover */
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+/* Utility class for margin bottom */
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+/* Contact form container styling */
+.contact-form {
+    max-width: 600px;
+    margin: 1rem auto;
+    text-align: left;
+}
+
+/* Main content styling */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Light shadow for depth */
+    border-radius: 8px;
+    min-height: 70vh; /* Ensure main content fills most of viewport */
+}
+
+.card button {
+    margin-top: 10px;
+}
+
+#basket-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#total {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #0a3662;
+}
