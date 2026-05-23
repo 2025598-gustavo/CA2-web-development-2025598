@@ -1,5 +1,7 @@
+// Import MySQL library
 const mysql = require("mysql2");
 
+// Create the connection with MySQL database
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
@@ -7,6 +9,7 @@ const db = mysql.createConnection({
   database: "dublin_dog_walkers"
 });
 
+// Test database connection
 db.connect((error) => {
   if (error) {
     console.error("Database connection failed:", error);
@@ -16,4 +19,5 @@ db.connect((error) => {
   console.log("Connected to MySQL database");
 });
 
+// Export database connection to be used in server.js
 module.exports = db;

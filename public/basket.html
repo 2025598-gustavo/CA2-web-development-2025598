@@ -3,17 +3,24 @@
 
 <head>
   <title>Basket</title>
+
+  <!-- Link to the main CSS file -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Link to the JavaScript file responsible for basket functionality -->
   <script src="js/basket.js" defer></script>
 
+  <!-- Import Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <header>
+    <!-- Header background image -->
     <div class="header-content"></div>
 
+    <!-- Navigation bar -->
     <nav>
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
@@ -23,18 +30,23 @@
     </nav>
   </header>
 
+  <!-- Basket page content -->
   <div class="container">
     <h2>Your Basket</h2>
 
+    <!-- Basket items will be displayed here using JavaScript -->
     <div id="basket-items"></div>
 
+    <!-- Total price will be displayed here -->
     <h3 id="total"></h3>
 
+    <!-- Checkout button starts hidden and only appears when basket has items -->
     <button id="checkout-btn" onclick="checkout()" style="display: none;">
       Proceed to Checkout
     </button>
   </div>
 
+  <!-- Footer section -->
   <footer>
     <p>© 2026 Dublin Dog Walkers</p>
   </footer>
