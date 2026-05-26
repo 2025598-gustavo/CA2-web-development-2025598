@@ -17,10 +17,16 @@ body {
 
 /* Navigation bar styling */
 nav {
-    background: #0a3662; /* Dark blue background */
+    background: #0a3662;
     padding: 20px;
-    text-align: center;
-    position: sticky; /* Sticks nav to top when scrolling */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: sticky;
+
+    position: relative;
 }
 
 /* Navigation links styling */
@@ -192,4 +198,19 @@ main {
     margin-top: 30px;
     font-size: 24px;
     color: #0a3662;
+}
+
+/* Basket positioned on the right side of nav */
+.basket-link {
+    position: absolute;
+    right: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Basket icon size */
+.basket-icon {
+    font-size: 20px;
 }
